@@ -30,3 +30,13 @@ In GH repo settings create a new web hook.
 Make change to repo to trigger a [check_run webhook](https://developer.github.com/webhooks/event-payloads/#check_run).
 
 In AWS console go to log events of the `check_run` Lambda function and follow instructions that appear in the log. The log message should tell you to start/stop runner or cancel workflow.
+
+## Undeploy
+
+Remove webhook in GitHub
+
+Remove AWS function with
+
+```shell
+npx serverless remove
+```

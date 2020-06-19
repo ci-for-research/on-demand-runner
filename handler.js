@@ -3,14 +3,14 @@
 module.exports.check_run = async event => {
   const body = JSON.parse(event.body)
   const action = body.action
-  console.log(JSON.stringify(action))
+  console.log(JSON.stringify(body))
 
   // const block_external_prs = true
   
-  // const is_private_repo = action.repository.private
+  // const is_private_repo = body.repository.private
   // // TODO https://developer.github.com/v3/actions/workflow-runs/#get-a-workflow-run
-  // // fetch run info from `action.check_run.url` and check event type
-  // // const run_info = await fetch(action.check_run.url, <access token>)
+  // // fetch run info from `body.check_run.url` and check event type
+  // // const run_info = await fetch(body.check_run.url, <access token>)
   // // const is_push = run_info.event !== 'push'
   // const is_push = true
   // //TODO
@@ -21,7 +21,7 @@ module.exports.check_run = async event => {
   // let is_external_pr = !is_private_repo && !is_push && !is_internal_pr
 
   // if (block_external_prs && is_external_pr) {
-  //   console.log('External PR detected please cancel job at ' + action.check_run.html_url);
+  //   console.log('External PR detected please cancel job at ' + body.check_run.html_url);
   //   // TODO also do action
   // }
 

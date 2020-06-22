@@ -23,7 +23,6 @@ In GH repo settings create a new web hook.
 * Use endpoint URL from deploy as Payload URL
 * Use content type `application/json`
 * Select only `Check runs` event
-* TODO add secret
 
 ## Test
 
